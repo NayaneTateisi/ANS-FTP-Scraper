@@ -20,8 +20,7 @@ Com este script, você consegue:
 ├── share_mensal.ipynb # Script para download do SIB de beneficiários ativos mês a mês
 ├── README.md # Documentação do projeto
 ├── data/ # Pasta onde os arquivos são salvos e extraídos
-└── .gitignore / # Arquivo com o caminho das pastas e arquivos gerados
-
+└── .gitignore / # Arquivo para que o Git ignore os arquivos e pastas gerados
 ```
 ---
 
@@ -60,7 +59,17 @@ if href.startswith('sib_inativo'):
 
 ### 3. Instale os pacotes e bibliotecas necessárias e execute o scrapper
 
+```bash
+import requests
+import zipfile
+from bs4 import BeautifulSoup
+import pandas as pd
+import os
+import warnings
+from  dask import dataframe as dd
+warnings.filterwarnings("ignore")
 
+```
 ## ⚙️ Funcionalidades adicionais
 
 
@@ -75,7 +84,8 @@ op = [327417, 335100, 350249, 366561]
 
 ## 📌 Observações
 
-O FTP da ANS não possui API para agrupamento ou download em massa, e disponibiliza arquivos separadamente em .zip. Este projeto resolve essa lacuna com automação.Cuidado com arquivos mal formatados. Recomendado usar o parâmetro error_bad_lines=False no pandas.read_csv() se necessário.
+O FTP da ANS não possui API para agrupamento ou download em massa, e disponibiliza arquivos separadamente em .zip. Este projeto resolve essa lacuna com automação.
+Cuidado com arquivos mal formatados. Recomendado usar o parâmetro error_bad_lines=False no pandas.read_csv() se necessário.
 
 ## ✨ Contribuições
 Contribuições são bem-vindas! Sinta-se livre para abrir issues ou pull requests com melhorias, correções ou novas funcionalidades.
