@@ -11,9 +11,10 @@ Com este script, você consegue:
 - ✅ Realizar filtros (Razão Social (Cod Operadora)/Período de referência).
 - ✅ (Opcional) Deletar os arquivos após o processamento.
 
----
 
 ## 📂 Estrutura do Projeto
+
+```bash
 
 ├── sibInativos.ipynb # Script para download do SIB de beneficiários inativos
 ├── share_mensal.ipynb # Script para download do SIB de beneficiários ativos mês a mês
@@ -21,7 +22,7 @@ Com este script, você consegue:
 ├── data/ # Pasta onde os arquivos são salvos e extraídos
 └── .gitignore / # Arquivo com o caminho das pastas e arquivos gerados
 
-
+```
 ---
 
 ## 🚀 Como usar
@@ -32,7 +33,6 @@ Com este script, você consegue:
 git clone https://github.com/seu-usuario/ans-ftp-scraper.git
 cd ans-ftp-scraper
 ```
----
 
 ## 🚀 Configuração
 
@@ -58,7 +58,7 @@ if href.startswith('sib_inativo'):
 
 ## 🚀 Execução
 
-### 4. Instale os pacotes e bibliotecas necessárias e execute o scrapper
+### 3. Instale os pacotes e bibliotecas necessárias e execute o scrapper
 
 
 ## ⚙️ Funcionalidades adicionais
@@ -77,7 +77,7 @@ op = [327417, 335100, 350249, 366561]
 
 O FTP da ANS não possui API para agrupamento ou download em massa, e disponibiliza arquivos separadamente em .zip. Este projeto resolve essa lacuna com automação.Cuidado com arquivos mal formatados. Recomendado usar o parâmetro error_bad_lines=False no pandas.read_csv() se necessário.
 
-##✨ Contribuições
+## ✨ Contribuições
 Contribuições são bem-vindas! Sinta-se livre para abrir issues ou pull requests com melhorias, correções ou novas funcionalidades.
 
 
